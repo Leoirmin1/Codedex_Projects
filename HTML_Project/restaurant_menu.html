@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Menu</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f8f8;
+            }
+
+            header {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
+
+            article {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 20px;
+                background-color: white;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+
+            #checkout-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            #checkout-button:hover {
+                background-color: #45a049;
+            }
+
+            .input-number {
+                width: 50px;
+                border: 1px solid #45a049;
+                border-radius: 4px;
+                padding: 1.5px;
+            }
+
+            .input-number:focus {
+                outline: none;
+                border-color: #4CAF50;
+                box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+            }
+
+            .input-radio {
+                margin: 0 10px 0 20px;
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img id="header_img" src="BIOTEC.png" alt="Restaurant Logo" width="50" height="50">
+            <h1>Restaurant BIOTEC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#order-form">Place Your Order</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Menu</h2>
+                <article>
+                    <img src="Tacos.jpg" alt="Menu Item 1" width="200" height="150">
+                    <h3>Tacos</h3>
+                    <p>Tacos de Arrachera con guacamole y salsa roja por $10.99</p>
+                </article>
+                <article>
+                    <img src="Costilla.jpg" alt="Menu Item 2" width="200" height="150">
+                    <h3>Costilla</h3>
+                    <p>Costillas de cerdo a la parrilla con salsa BBQ y ensalada o guarnición de papas fritas por $12.99</p>
+                </article>
+                <article>
+                    <img src="Mole.jpg" alt="Menu Item 3" width="200" height="150">
+                    <h3>Mole</h3>
+                    <p>Mole poblano con pollo, servido con arroz y tortillas por $11.99</p>
+                </article>
+            </section>
+            <section>
+                <h2>Place Your Order</h2>
+                <form id="order-form" action="#" method="post">
+                    <label for="tacos">Tacos:</label>
+                    <input type="number" class="input-number" id="tacos" name="tacos" min="0" default="0" required><br><br>
+
+                    <label for="costilla">Costilla:</label>
+                    <input type="number" class="input-number" id="costilla" name="costilla" min="0" default="0" required><br><br>
+
+                    <label for="mole">Mole:</label>
+                    <input type="number" class="input-number" id="mole" name="mole" min="0" default="0" required><br><br>
+
+                    <label for="add-on">Select Add-On:</label><br><br>
+                    <input type="radio" class="input-radio" id="none" name="add-on" value="none" required>
+                    <label for="none">None</label>
+                    <input type="radio" class="input-radio" id="drink" name="add-on" value="drink" required>
+                    <label for="drink">Drink - $1.99</label>
+                    <input type="radio" class="input-radio" id="dessert" name="add-on" value="dessert" required>
+                    <label for="dessert">Dessert - $2.99</label><br><br>
+                    <input id="checkout-button" type="submit" value="Go To Checkout">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Made with love by @BrinyTulip12</p>
+            <p>&copy; 2025 BIOTEC. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
